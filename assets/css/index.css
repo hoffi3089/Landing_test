@@ -1,0 +1,274 @@
+@import url(../fonts/FuturaLightfont.ttf);
+:root{
+  --green: #4E844FCC;
+  --light-green:#4E844F66;
+  --dark-green: #00523E;
+  --middle-green: #4E844F;
+  --dark-gray: #4D4D4D;
+  --yellow : #FCFF51;
+  --brown: #D88100;
+  --black: black;
+}
+body {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  font-weight: 'Futura LtCn BT';
+}
+* {
+  box-sizing: border-box;
+}
+
+.dark-green {
+  color: var(--dark-green);
+}
+
+.line {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url(../img/line.png);
+  background-repeat: repeat-x;
+  height: 14px;
+  width: 100%;
+}
+
+nav {
+  width: 100%;
+  padding: 20px 70px 16px 70px;
+}
+
+nav:first-child {
+  gap: 10px;
+}
+nav > .row {
+  gap: 10px;
+}
+nav:first-child p,
+nav .row p {
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 10px;
+  letter-spacing: 5px;
+  color: var(--middle-green);
+}
+
+nav .row .col span {
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 13px;
+  letter-spacing: 6px;
+}
+nav .row .col {
+  gap: 8px;
+}
+.col   {
+  display: flex;;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.row  {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+h1,
+h2, 
+h3,
+h4,
+h5,
+h6, 
+p {
+  padding: 0;
+  margin: 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+h1, .h1 {
+  font-size: 18px;
+}
+
+h2, .h2 {
+  font-size: 23px;
+  line-height: 33px;
+  font-weight: 500;
+  letter-spacing: 10px;
+  color: var(--dark-gray);
+}
+.slide {
+  gap: 15px;
+  position: relative;
+  height: 400px;
+  width: 100%;
+}
+
+.slide img {
+  height: 400px;
+}
+.slide img:nth-child(2) {
+
+  border-radius: 25px;
+}
+
+.slide img:first-child {
+  border-radius: 0 25px 25px 0;
+}
+
+.slide img:last-child {
+  border-radius: 25px 0 0 25px;
+}
+
+.slide_prev {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  top: 50%;
+  left: 0;
+  gap: 55%;
+  transform: translateY(50%);
+}
+
+
+.slide-dot {
+  margin-top: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 23px;
+}
+
+.slide-dot div {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: 1px solid #9A9A9A;
+  background-color: white;
+}
+
+.slide-dot div:nth-child(2) {
+  background-color: #9A9A9A;
+}
+
+.w-25 {
+  width: 25%;
+}
+
+.w-50 {
+  width: 50%;
+}
+main {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.card-group {
+  margin-top: 75px;
+}
+.card-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card-items {
+  margin-top: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  
+}
+
+.card {
+  border-radius: 10px;
+  /* box-shadow: 0 0 1px 1px gray; */
+  box-shadow: 1px 5px 8px 0 rgb(177, 177, 177);
+  padding: 30px 30px 30px 0;
+  position: relative;
+}
+
+.card::before {
+  content: 'New';
+  position: absolute;
+  top: -30px;
+  left: -15px;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 2.5px;
+  background-color: yellow;
+  border-radius: 50%;
+  padding: 16px;
+  width: 30px;
+  height: 30px;
+}
+.card img{
+  width: 95px;
+  height: 138px;
+}
+
+.card h3 {
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  color: var(--dark-gray);
+  padding: 3px 12px 1px 18px;
+  border-radius: 23px;
+  border: 1px solid var(--dark-gray);
+}
+
+.card .col p:first-of-type {
+  margin-top: 24px;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 28px;
+  letter-spacing: 1.5px;
+  text-decoration: underline;
+  text-underline-offset: 20px;
+  text-decoration-color: black;
+}
+
+.card .col p:last-of-type {
+  margin-top: 40px;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 28px;
+  letter-spacing: 7px;
+}
+
+.button, .shadow {
+  padding: 7px 35px;
+  border-radius: 6px;
+  border: 1px solid var(--middle-green);
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000000;
+  position: relative;
+  background-color: white;
+}
+
+.shadow {
+  position: absolute;
+  bottom: -4px;
+  right: -4px;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.btn-group {
+  margin-top: 54px;
+  position: relative;
+}
